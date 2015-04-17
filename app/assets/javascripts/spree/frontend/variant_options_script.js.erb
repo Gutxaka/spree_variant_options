@@ -175,14 +175,24 @@ function VariantOptions(params) {
       return variant = variants[selection[0]];
     } else {
       var prices = [];
+      var cost_prices = [];
       $.each(variants, function(key, value) { prices.push(value.price) });
+      $.each(variants, function(key, value) { cost_prices.push(value.cost_price) });
       prices = $.unique(prices).sort(function(a, b) {
+        return to_f(a) < to_f(b) ? -1 : 1;
+      });
+      cost_prices = $.unique(cost_prices).sort(function(a, b) {
         return to_f(a) < to_f(b) ? -1 : 1;
       });
       if (prices.length == 1) {
         $('#product-price .price').html('<span class="price assumed">' + prices[0] + '</span>');
       } else {
         $('#product-price .price').html('<span class="price from">' + prices[0] + '</span> - <span class="price to">' + prices[prices.length - 1] + '</span>');
+      }
+      if (cost_prices.length == 1) {
+        $('#product-price .cost-price').html('<span>' + cost_prices[0] + '</span>');
+      } else {
+        $('#product-price .cost-price').html('<span>' + cost_prices[0] + '</span> - <span>' + cost_prices[prices.length - 1] + '</span>');
       }
       return variants;
     }
@@ -192,6 +202,7 @@ function VariantOptions(params) {
     if (variant) {
       $('#variant_id, form[data-form-type="variant"] input[name$="[variant_id]"]').val(variant.id);
       $('#product-price .price').removeClass('unselected').text(variant.price);
+      $('#product-price .cost-price').removeClass('unselected').text(variant.cost_price);
       if (variant.in_stock)
         $('#cart-form button[type=submit]').attr('disabled', false).fadeTo(100, 1);
       $('form[data-form-type="variant"] button[type=submit]').attr('disabled', false).fadeTo(100, 1);
@@ -210,10 +221,12 @@ function VariantOptions(params) {
       $('#variant_id, form[data-form-type="variant"] input[name$="[variant_id]"]').val('');
       $('#cart-form button[type=submit], form[data-form-type="variant"] button[type=submit]').attr('disabled', true).fadeTo(0, 0.5);
       price = $('#product-price .price').addClass('unselected')
+      cost_price = $('#product-price .cost-price').addClass('unselected')
       // Replace product price by "(select)" only when there are at least 1 variant not out-of-stock
       variants = $("div.variant-options.index-0")
       if (variants.find("a.option-value.out-of-stock").length != variants.find("a.option-value").length)
         price.text(i18n.variant_options_select);
+        cost_price.text(i18n.variant_options_select);
     }
   }
 
