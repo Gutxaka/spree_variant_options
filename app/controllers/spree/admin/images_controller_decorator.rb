@@ -1,8 +1,8 @@
 Spree::Admin::ImagesController.class_eval do
-  alias_method :super_load_data, :load_edit_data
+  alias_method :super_load_data, :load_data
 
   # Called in a before_filter
-  def load_edit_data
+  def load_data
     super_load_data
 
     @grouped_option_values ||= @product.option_values.group_by(&:option_type)
@@ -12,6 +12,7 @@ Spree::Admin::ImagesController.class_eval do
   # Called in a create.before
   def set_viewable
     viewable_id = params[:image][:viewable_id]
+    attachment = params[:attachment]
 
     if viewable_id.is_a?(Hash)
       @product.errors.add(:attachment, 'Erro')
@@ -27,7 +28,12 @@ Spree::Admin::ImagesController.class_eval do
           variant_option_ids = variant.option_values.pluck(:id)
 
           if ([ov_combination].flatten - variant_option_ids).empty?
-            create_image(variant, permitted_resource_params)
+            if attachment.nil?
+              image = params[:image]
+              updating_image(variant, image)
+            else
+              create_image(variant, permitted_resource_params)
+            end
           end
         end
       end
@@ -45,6 +51,11 @@ Spree::Admin::ImagesController.class_eval do
     image.viewable_type = 'Spree::Variant'
     image.viewable_id = variant.id
     variant.images << image
+    variant.save
+  end
+  def updating_image(variant, image)
+    images = image
+    variant.images << images
     variant.save
   end
 end
