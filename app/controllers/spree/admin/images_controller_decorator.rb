@@ -29,7 +29,8 @@ Spree::Admin::ImagesController.class_eval do
 
           if ([ov_combination].flatten - variant_option_ids).empty?
             if attachment.nil?
-              update_image(variant, permitted_resource_params)
+              image = params[:image]
+              update_image(variant, image)
             else
               create_image(variant, permitted_resource_params)
             end
@@ -52,8 +53,8 @@ Spree::Admin::ImagesController.class_eval do
     variant.images << image
     variant.save
   end
-  def update_image(variant, image_attributes)
-    image = Spree::Image.update(permitted_resource_params)
+  def update_image(variant, image)
+    image = Spree::Image.new(image)
     image.viewable_type = 'Spree::Variant'
     image.viewable_id = variant.id
     variant.images << image
