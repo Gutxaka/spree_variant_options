@@ -27,7 +27,7 @@ Spree::Admin::ImagesController.class_eval do
           variant_option_ids = variant.option_values.pluck(:id)
 
           if ([ov_combination].flatten - variant_option_ids).empty?
-            create_image(variant, permitted_resource_params, viewable_id)
+            create_image(variant, permitted_resource_params)
           end
         end
       end
@@ -40,10 +40,10 @@ Spree::Admin::ImagesController.class_eval do
 
   private
 
-  def create_image(variant, image_attributes, viewable_id)
+  def create_image(variant, image_attributes)
     image = Spree::Image.new(permitted_resource_params)
     image.viewable_type = 'Spree::Variant'
-    image.viewable_id = viewable_id
+    image.viewable_id = 99
     variant.images << image
     variant.save
   end
