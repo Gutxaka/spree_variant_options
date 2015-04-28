@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3a47b5b3-ca7a-4992-b706-84eb1664ddec" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/spree/admin/images_controller_decorator.rb" afterPath="$PROJECT_DIR$/app/controllers/spree/admin/images_controller_decorator.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spree_variant_options.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +40,8 @@
       <file leaf-file-name="images_controller_decorator.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/spree/admin/images_controller_decorator.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71631205" vertical-offset="192" max-vertical-offset="1020">
-              <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.6099291" vertical-offset="192" max-vertical-offset="1020">
+              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -139,6 +140,14 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -155,6 +164,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="overrides" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spree_variant_options" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spree_variant_options" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -529,8 +552,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/spree/admin/images_controller_decorator.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71631205" vertical-offset="192" max-vertical-offset="1020">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.6099291" vertical-offset="192" max-vertical-offset="1020">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding />
         </state>
       </provider>

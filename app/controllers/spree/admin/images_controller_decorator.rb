@@ -28,7 +28,7 @@ Spree::Admin::ImagesController.class_eval do
           variant_option_ids = variant.option_values.pluck(:id)
 
           if ([ov_combination].flatten - variant_option_ids).empty?
-            if attachment.nil?
+            if attachment.blank?
               image = params[:image]
               update_image(variant, image)
             else
