@@ -43,7 +43,7 @@ Spree::Admin::ImagesController.class_eval do
   def create_image(variant, image_attributes)
     image = Spree::Image.new(permitted_resource_params)
     image.viewable_type = 'Spree::Variant'
-    image.viewable_id = 99
+    image.viewable_id = variant.id
     variant.images << image
     variant.save
   end
