@@ -1,6 +1,6 @@
 <!-- replace '#products' -->
 
-<div id="products" class="row" data-hook>
+<ul id="products" class="inline product-listing columns twelve omega"  data-hook>
   <% products.each do |product| %>
     <% option_values = Spree::OptionValue.for_product(product).where(option_type_id: SpreeVariantOptions::VariantConfig.main_option_type_id).all %>
     <% url_base = product_path(product, taxon_id: @taxon.try(:id)) %>

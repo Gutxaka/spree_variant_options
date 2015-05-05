@@ -1,11 +1,9 @@
 source "http://rubygems.org"
-gem 'spree', github: 'spree/spree', branch: 'master'
-gem 'sass'
+gem 'spree', github: 'spree/spree', branch: '2-4-stable'
+gem 'sass', '~> 3.2.2'
+gem 'rails', '~> 4.1.8'
+gem 'sass-rails', '~> 4.0.5'
 
-group :test do
-  gem 'cucumber-rails', :require => false
-  # database_cleaner is not required, but highly recommended
-  gem 'database_cleaner'
-end
+gem 'font-awesome-sass', '~> 4.2.0'
 
 gemspec
