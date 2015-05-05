@@ -1,8 +1,10 @@
 Spree::Admin::ImagesController.class_eval do
-  alias_method :super_load_data, :load_data
+  alias_method :super_load_data, :load_edit_data
+
   # Called in a before_filter
-  def load_data
+  def load_edit_data
     super_load_data
+
     @grouped_option_values ||= @product.option_values.group_by(&:option_type)
     @grouped_option_values.sort_by { |option_type, option_values| option_type.position }
   end
@@ -40,16 +42,22 @@ Spree::Admin::ImagesController.class_eval do
 
   def create_image(variant, image_attributes)
 
-    attachment = params[:attachment]
+    attachment = params[:image][:attachment]
 
-    if attachment.blank? || attachment.nil?
-      image = @image.duplicate
+    if attachment.nil?
+      image = Spree::Image.new(permitted_resource_params)
+      image.attachment = @image.attachment
+      image.viewable_type = 'Spree::Variant'
+      image.viewable_id = variant.id
+      variant.images << image
+      variant.save
     else
       image = Spree::Image.new(permitted_resource_params)
+      image.viewable_type = 'Spree::Variant'
+      image.viewable_id = variant.id
+      variant.images << image
+      variant.save
     end
-    image.viewable_type = 'Spree::Variant'
-    image.viewable_id = variant.id
-    variant.images << image
-    variant.save
+
   end
 end
