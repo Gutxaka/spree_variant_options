@@ -4,7 +4,7 @@
     <list default="true" id="3a47b5b3-ca7a-4992-b706-84eb1664ddec" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/spree/admin/3.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/spree/admin/values.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spree_variant_options.gemspec" afterPath="$PROJECT_DIR$/spree_variant_options.gemspec" />
     </list>
     <ignored path="spree_variant_options.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spree_variant_options.gemspec" pinned="false" current-in-tab="false">
+      <file leaf-file-name="spree_variant_options.gemspec" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spree_variant_options.gemspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="795">
-              <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.73170733" vertical-offset="0" max-vertical-offset="780">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28368795" vertical-offset="0" max-vertical-offset="423">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
               <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding />
             </state>
@@ -101,10 +101,10 @@
       <list>
         <option value="$PROJECT_DIR$/app/assets/javascripts/spree/frontend/variant_options_script.js.erb" />
         <option value="$PROJECT_DIR$/app/controllers/spree/admin/images_controller_decorator.rb" />
-        <option value="$PROJECT_DIR$/spree_variant_options.gemspec" />
         <option value="$PROJECT_DIR$/app/overrides/spree/shared/_products/replace_products_with_master_images.html.erb.deface" />
         <option value="$PROJECT_DIR$/app/views/spree/admin/images/_form.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/spree_variant_options.gemspec" />
       </list>
     </option>
   </component>
@@ -474,14 +474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spree_variant_options.gemspec">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="795">
-          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/overrides/spree/shared/_products/replace_products_with_master_images.html.erb.deface">
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -503,8 +495,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28368795" vertical-offset="0" max-vertical-offset="423">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
           <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spree_variant_options.gemspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73170733" vertical-offset="0" max-vertical-offset="780">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
