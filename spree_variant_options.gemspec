@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
 
   # Development
   s.add_development_dependency('spree_sample',     spree_version)
+<<<<<<< HEAD
   s.add_development_dependency 'rspec-rails',  '~> 3.1'
   s.add_development_dependency('pry', '~> 0.10.0')
   s.add_development_dependency('m')
@@ -37,9 +38,22 @@ Gem::Specification.new do |s|
   s.add_development_dependency('database_cleaner', '~> 1.2.0')
   s.add_development_dependency('sqlite3',          '~> 1.3.0')
   s.add_development_dependency('coffee-rails',     '~> 4.0.1')
+=======
+  s.add_development_dependency('dummier')
+  s.add_development_dependency('shoulda')
+  s.add_development_dependency('shoulda-context')
+  s.add_development_dependency('shoulda-matchers')
+  s.add_development_dependency('pry', '~> 0.10.0')
+  s.add_development_dependency('m')
+  s.add_development_dependency('ffaker')
+  s.add_development_dependency('factory_girl_rails')
+  s.add_development_dependency('cucumber-rails')
+  s.add_development_dependency('database_cleaner')
+  s.add_development_dependency('sqlite3')
+  s.add_development_dependency('coffee-rails')
+>>>>>>> 670c5b117e8d53e8695709d5d6567a1fc861f9ad
   s.add_development_dependency('capybara')
   s.add_development_dependency('poltergeist')
   s.add_development_dependency('launchy')
-  s.add_development_dependency("selenium-webdriver", '2.42.0')
-  s.add_development_dependency("sprockets", '2.12.1')
+  s.add_development_dependency("sprockets")
 end
