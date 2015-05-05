@@ -16,25 +16,6 @@
         <%= check_box_tag "master_option", @product.master.id, false, :id => "master_option" %>
         <%= label_tag "master_option", Spree.t(:all) %>
         <ul></ul>
-
-<<<<<<< HEAD
-      <% @grouped_option_values.each do |option_type, option_values| %>
-        <div>
-          <%= check_box_tag "option_types[]", option_type.id, (params[:option_types] || []).include?(option_type.id.to_s), :id => "option_type_#{option_type.id}"%>
-          <%= label_tag "option_type_#{option_type.id}", option_type.presentation %>
-
-          <ul class="checkbox">
-            <% option_values.each_with_index do |option_value, index| %>
-              <li>
-                <%= check_box_tag "image[viewable_id][#{option_type.id}][]", option_value.id, false, id: "#{option_value.id}_#{index}" %>
-                <%= label_tag "image[viewable_id][#{option_type.id}][#{option_type.id}]", option_value.presentation, for: "#{option_value.id}_#{index}" %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-        <br>
-      <% end %>
-=======
         <% @grouped_option_values.each do |option_type, option_values| %>
           <div class="option-type-field">
             <%= check_box_tag "option_types[]", option_type.id, (params[:option_types] || []).include?(option_type.id.to_s), :id => "option_type_#{option_type.id}", :class => "option-type" %>
@@ -52,7 +33,6 @@
           </div>
           <br>
         <% end %>
->>>>>>> 670c5b117e8d53e8695709d5d6567a1fc861f9ad
       </div>
     <% end %>
     </div>
