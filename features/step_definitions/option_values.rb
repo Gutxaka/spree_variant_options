@@ -17,6 +17,7 @@ Then /^I fill in the option value fields for (.*)$/ do |parent|
   end
   within parent do
     %w(name presentation).each do |name|
+      puts "name: #{name}"
       find(:xpath, ".//input[contains(@name, '[#{name}]')]").set('xxx-large')
     end
     find(:xpath, ".//input[contains(@name, '[image]')]").set(File.expand_path("../../../test/support/images/1.jpg", __FILE__))
